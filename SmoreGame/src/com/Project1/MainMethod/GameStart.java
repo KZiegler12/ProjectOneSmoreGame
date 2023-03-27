@@ -37,6 +37,7 @@ public class GameStart {
 				cont = false;
 			}else {
 				user.useOneOrTwo();
+				cont = true;
 			}
 		}while(cont);	
 	}

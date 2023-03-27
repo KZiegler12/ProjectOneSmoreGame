@@ -59,7 +59,7 @@ public class Ending extends Senario{
 	}
 	
 	public void noSmore(Player user, Scanner in) {
-		System.out.println("\n Tooo Bad you can make a S'more or have the warmth of"
+		System.out.println("\n Tooo Bad you can't make a S'more or have the warmth of"
 				+ "\n a nice Fire. You lost but with every loss comes another"
 				+ "\n chance to succeed maybe try again. Maybe think differently "
 				+ "\n regarding your choices. Or try a whole new character. The"

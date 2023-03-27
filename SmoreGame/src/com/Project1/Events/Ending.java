@@ -24,9 +24,10 @@ public class Ending extends Senario{
 		}else if(inventory.contains("Lighter") && inventory.contains("Lighter Fluid") && inventory.contains("Fire Wood")){
 			user.starLine();
 			makeFire( user,  in);
-		}else
+		}else if(user.getScore()<3) {
 			user.starLine();
 			noSmore(user , in);	
+		}
 	}
 	
 	public void makeSmore(Player user, Scanner in) {
@@ -91,6 +92,7 @@ public class Ending extends Senario{
 				endCredits();
 				cont = false;
 			}else 
+				user.useOneOrTwo();
 				cont = true;
 		}while(cont);	
 	}

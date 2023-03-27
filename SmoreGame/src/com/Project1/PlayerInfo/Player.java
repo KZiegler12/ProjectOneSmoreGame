@@ -9,10 +9,12 @@ public class Player {
 	private int strength;
 	private int carisma;
 	private int vision;
+	private Player[] players;
 	private int score;
 	private int numPlayers;
 	
 	public Player() {
+		players = new Player[5];
 		this.numPlayers++;
 	}
 	
@@ -21,6 +23,7 @@ public class Player {
 		this.strength=strength;
 		this.carisma=carisma;
 		this.vision=vision;
+		players = new Player[5];
 		this.score=0;
 		this.numPlayers++;
 	}	

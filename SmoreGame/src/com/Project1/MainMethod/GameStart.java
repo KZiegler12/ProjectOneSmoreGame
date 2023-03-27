@@ -5,14 +5,13 @@ import com.Project1.PlayerInfo.Player;
 
 public class GameStart {
 	
-	static Scanner in = new Scanner(System.in);
-	
 	public static void main(String[] Args) {
+		Scanner in = new Scanner(System.in);
 		GameStart start = new GameStart();
-		start.playGame();
+		start.playGame(in);
 	}
 	
-	public void playGame() {
+	public void playGame(Scanner in) {
 		Player user = new Player();
 		int choice=0;
 		boolean cont=false;

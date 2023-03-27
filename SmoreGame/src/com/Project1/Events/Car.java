@@ -1,7 +1,7 @@
 package com.Project1.Events;
 
 import java.util.Scanner;
-import com.project1.playerInfo.Player;
+import com.Project1.PlayerInfo.Player;
 
 public class Car extends Senario{
 

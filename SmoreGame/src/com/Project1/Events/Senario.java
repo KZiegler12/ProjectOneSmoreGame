@@ -3,7 +3,7 @@ package com.Project1.Events;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-import com.project1.playerInfo.Player;
+import com.Project1.PlayerInfo.Player;
 
 public class Senario  {
 

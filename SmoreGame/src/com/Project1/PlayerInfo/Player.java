@@ -1,7 +1,7 @@
 package com.Project1.PlayerInfo;
 
 import java.util.Scanner;
-import com.project1.Events.Senario;
+import com.Project1.Events.Senario;
 
 public class Player {
 	

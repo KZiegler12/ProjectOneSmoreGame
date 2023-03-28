@@ -80,18 +80,21 @@ public class Ending extends Senario{
 		try {
 			choice = Integer.parseInt(in.nextLine().trim());
 		}catch(NumberFormatException ex) {
-			user.useNumbers();
 			replayGame(user, in);
 		}
-		if(choice == 1) {
-			user.createNewPlayer(user, in);
-			cont=false;
-		}else if(choice == 2) {
-			endCredits();
-			cont=false;
-		}else 
-			user.useOneOrTwo();
-			cont = true;
+		switch(choice) {
+			case 1:
+				user.createNewPlayer(user, in);
+				cont=false;
+				break;
+			case 2:
+				endCredits();
+				cont=false;
+				break;
+			default: 
+				user.useOneOrTwo();
+				cont = true;
+		}
 		}while(cont);
 	}
 	

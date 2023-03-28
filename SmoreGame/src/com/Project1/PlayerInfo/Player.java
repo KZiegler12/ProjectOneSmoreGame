@@ -29,11 +29,33 @@ public class Player {
 	}	
 	
 	public void createNewPlayer(Player user,Scanner in) {
+		boolean cont = false;
+		int choice = 0;
+		starLine();
+		System.out.println("\n Would you like to change your name?");
+		System.out.println(" Please enter (1) for YES (2) for NO");
+		do {
+		user.enterChoice();
+		try {
+			choice = Integer.parseInt(in.nextLine().trim());
+		}catch(NumberFormatException ex) {
+			user.useNumbers();
+			createNewPlayer(user , in);
+		}
 		Player temp = new Player();
-		gameStart(temp, in);
+		if(choice == 1) {
+			gameStart(temp, in);
+			cont = false;
+		}else if(choice == 2) {
+			temp.setName(user.getName());
+			chooseCharacter(temp, in);
+			cont = false;
+		}else 
+			cont = true;
+		}while(cont);
 	}
 	
-	public Player gameStart(Player user , Scanner in) {
+	public void gameStart(Player user , Scanner in) {
 		String name = " ";
 		do{
 			System.out.print("\n Lets get started! \n Please input your username:");
@@ -42,10 +64,9 @@ public class Player {
 		user.setName(name.trim());
 		starLine();
 		chooseCharacter(user , in);
-		return user;
 	}
 
-	public Player chooseCharacter(Player user, Scanner in) {
+	public void chooseCharacter(Player user, Scanner in) {
 		int choice=0;
 		boolean cont = false;
 		System.out.print("\n Please choose you character: "
@@ -93,7 +114,6 @@ public class Player {
 			useOneOrTwo();
 			chooseCharacter(user, in);
 		}	
-		return user;
 	}
 	
 	public void runGame(Player user , Scanner in) {
@@ -101,14 +121,12 @@ public class Player {
 		readyToPlay.generateSenarios(user, in);
 	}
 	
-	public Player savePlayer(Player user){
+	public void savePlayer(Player user){
 		for(int i=0 ; i<players.length ; i++) {
 			if(i < numPlayers) {
 				players[i] = user;
-				return user;
 			}
 		}
-		return user;
 	}
 	
 	public void setStats(int strength, int carisma , int vision) {

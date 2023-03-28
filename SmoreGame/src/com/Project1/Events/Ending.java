@@ -70,7 +70,7 @@ public class Ending extends Senario{
 	
 	public void replayGame(Player user, Scanner in) {
 		int choice = 0;
-		boolean cont;
+		boolean cont=false;
 		inventory.clear();
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
 		do {

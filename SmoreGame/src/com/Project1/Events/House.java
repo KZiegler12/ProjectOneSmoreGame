@@ -5,8 +5,6 @@ import com.Project1.PlayerInfo.Player;
 
 public class House extends Senario{
 	
-	public House() {}
-		
 	public void eventHouse(Player user , Scanner in) {
 		int choice = 0 ;
 		System.out.println("\n Welcome to your Home " + user.getName() + ". "

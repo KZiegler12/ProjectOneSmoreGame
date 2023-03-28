@@ -4,8 +4,6 @@ import java.util.Scanner;
 import com.Project1.PlayerInfo.Player;
 
 public class Car extends Senario{
-
-	public Car() {}
 	
 	public void eventCar(Player user , Scanner in) {
 		int choice = 0;

@@ -8,8 +8,6 @@ import com.Project1.PlayerInfo.Player;
 public class Senario  {
 
 	static ArrayList<String> inventory = new ArrayList<String>();
-
-	public Senario(){}
 	
 	Random rand = new Random();
 	

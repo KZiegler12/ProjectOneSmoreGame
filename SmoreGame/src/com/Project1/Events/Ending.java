@@ -5,8 +5,6 @@ import com.Project1.PlayerInfo.Player;
 
 public class Ending extends Senario{
 	
-	public Ending() {}
-	
 	public void endGame(Player user, Scanner in) {
 		lifechoice(user,in);
 	}
@@ -74,7 +72,6 @@ public class Ending extends Senario{
 		inventory.clear();
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
 		int choice = 0;
-		int finalChoice=0;
 		boolean cont = false;
 		do {
 			System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
@@ -86,13 +83,12 @@ public class Ending extends Senario{
 				user.useNumbers();
 				replayGame(user, in);
 			}
-			finalChoice = choice;
-			if(finalChoice == 1) {
+			if(choice == 1) {
 				user.createNewPlayer(user, in);
 				cont = false;
-			}else if(finalChoice == 2) {
+			}else if(choice == 2) {
 				endCredits();
-				cont = false;
+				break;
 			}else 
 				user.useOneOrTwo();
 				cont = true;

@@ -4,8 +4,6 @@ import java.util.Scanner;
 import com.Project1.PlayerInfo.Player;
 
 public class Store extends Senario{
-	
-	public Store() {}
 
 	public void eventStore(Player user , Scanner in) {
 		int choice = 0;

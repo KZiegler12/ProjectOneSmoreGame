@@ -4,9 +4,7 @@ import java.util.Scanner;
 import com.Project1.PlayerInfo.Player;
 
 public class Yard extends Senario{
-
-	public Yard() {}
-		
+	
 	public void eventYard(Player user , Scanner in) {
 		int choice = 0;
 		System.out.println("\n Finally you get to your Back Yard " + user.getName() + "."

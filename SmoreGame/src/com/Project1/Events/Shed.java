@@ -5,8 +5,6 @@ import com.Project1.PlayerInfo.Player;
 
 public class Shed extends Senario {
 
-	public Shed() {}
-		
 	public void eventShed(Player user , Scanner in) {
 		int choice = 0;
 		System.out.println("\n Welcome to your SHED " + user.getName() + ". "

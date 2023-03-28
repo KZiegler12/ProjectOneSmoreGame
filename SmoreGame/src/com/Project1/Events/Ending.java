@@ -85,9 +85,11 @@ public class Ending extends Senario{
 			}
 			if(choice == 1) {
 				user.createNewPlayer(user, in);
+				cont = false;
 				break;
 			}if(choice == 2) {
 				endCredits();
+				cont = false;
 				break;
 			}else 
 				user.useOneOrTwo();

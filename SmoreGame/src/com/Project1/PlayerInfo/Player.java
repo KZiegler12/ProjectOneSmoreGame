@@ -117,6 +117,12 @@ public class Player {
 		}	
 	}
 	
+	public void setStats(int strength, int carisma , int vision) {
+		setStrength(strength);
+		setCarismatic(carisma);
+		setVision(vision);
+	 }
+	
 	public void runGame(Player user , Scanner in) {
 		Senario readyToPlay = new Senario();
 		readyToPlay.generateSenarios(user, in);
@@ -124,17 +130,10 @@ public class Player {
 	
 	public void savePlayer(Player user){
 		for(int i=0 ; i<players.length ; i++) {
-			if(i < numPlayers) {
+			if(i < numPlayers) 
 				players[i] = user;
-			}
 		}
 	}
-	
-	public void setStats(int strength, int carisma , int vision) {
-		setStrength(strength);
-		setCarismatic(carisma);
-		setVision(vision);
-	 }
 	
 	public void printPlayers() {
 		for(int i = 0 ; i < numPlayers ; i++ ) {

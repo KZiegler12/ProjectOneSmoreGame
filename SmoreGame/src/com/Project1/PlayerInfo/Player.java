@@ -51,6 +51,7 @@ public class Player {
 			chooseCharacter(temp, in);
 			cont = false;
 		}else 
+			useOneOrTwo();
 			cont = true;
 		}while(cont);
 	}

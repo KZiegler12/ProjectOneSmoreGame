@@ -72,7 +72,7 @@ public class Ending extends Senario{
 		inventory.clear();
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
 		int choice = 0;
-		boolean cont = false;
+		boolean cont = true;
 		do {
 			System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
 					+ "\n Please enter (1) for YES (2) for NO");
@@ -85,8 +85,8 @@ public class Ending extends Senario{
 			}
 			if(choice == 1) {
 				user.createNewPlayer(user, in);
-				cont = false;
-			}else if(choice == 2) {
+				break;
+			}if(choice == 2) {
 				endCredits();
 				break;
 			}else 

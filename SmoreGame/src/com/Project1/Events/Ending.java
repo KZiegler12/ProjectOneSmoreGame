@@ -69,9 +69,11 @@ public class Ending extends Senario{
 
 	
 	public void replayGame(Player user, Scanner in) {
+		int choice = 0;
+		boolean cont;
 		inventory.clear();
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
-		int choice = 0;
+		do {
 		System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
 					+ "\n Please enter (1) for YES (2) for NO");
 		user.enterChoice();
@@ -83,11 +85,14 @@ public class Ending extends Senario{
 		}
 		if(choice == 1) {
 			user.createNewPlayer(user, in);
-		}if(choice == 2) {
+			cont=false;
+		}else if(choice == 2) {
 			endCredits();
+			cont=false;
 		}else 
 			user.useOneOrTwo();
-			replayGame(user, in);
+			cont = true;
+		}while(cont);
 	}
 	
 	public void endCredits() {

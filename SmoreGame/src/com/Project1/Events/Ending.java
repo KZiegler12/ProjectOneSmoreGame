@@ -72,29 +72,22 @@ public class Ending extends Senario{
 		inventory.clear();
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
 		int choice = 0;
-		boolean cont = true;
-		do {
-			System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
+		System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
 					+ "\n Please enter (1) for YES (2) for NO");
-			user.enterChoice();
-			try {
+		user.enterChoice();
+		try {
 			choice = Integer.parseInt(in.nextLine().trim());
-			}catch(NumberFormatException ex) {
-				user.useNumbers();
-				replayGame(user, in);
-			}
-			if(choice == 1) {
-				user.createNewPlayer(user, in);
-				cont = false;
-				break;
-			}if(choice == 2) {
-				endCredits();
-				cont = false;
-				break;
-			}else 
-				user.useOneOrTwo();
-				cont = true;
-		}while(cont);	
+		}catch(NumberFormatException ex) {
+			user.useNumbers();
+			replayGame(user, in);
+		}
+		if(choice == 1) {
+			user.createNewPlayer(user, in);
+		}if(choice == 2) {
+			endCredits();
+		}else 
+			user.useOneOrTwo();
+			replayGame(user, in);
 	}
 	
 	public void endCredits() {

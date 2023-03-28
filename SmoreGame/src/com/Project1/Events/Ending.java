@@ -24,7 +24,7 @@ public class Ending extends Senario{
 		}else if(inventory.contains("Lighter") && inventory.contains("Lighter Fluid") && inventory.contains("Fire Wood")){
 			user.starLine();
 			makeFire( user,  in);
-		}else if(user.getScore()<3) {
+		}else if(user.getScore()>=0 || user.getScore()<=6 ) {
 			user.starLine();
 			noSmore(user , in);	
 		}
@@ -75,9 +75,9 @@ public class Ending extends Senario{
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
 		int choice = 0;
 		boolean cont = false;
-		System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
-				+ "\n Please enter (1) for YES (2) for NO");
 		do {
+			System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
+					+ "\n Please enter (1) for YES (2) for NO");
 			user.enterChoice();
 			try {
 			choice = Integer.parseInt(in.nextLine().trim());
@@ -91,6 +91,7 @@ public class Ending extends Senario{
 			}else if(choice == 2) {
 				endCredits();
 				cont = false;
+				break;
 			}else 
 				user.useOneOrTwo();
 				cont = true;

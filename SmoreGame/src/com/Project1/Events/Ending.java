@@ -98,6 +98,7 @@ public class Ending extends Senario{
 				break;
 		}
 		}while(cont);
+		endCredits();
 	}
 	
 	public void endCredits() {

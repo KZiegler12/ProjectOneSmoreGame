@@ -18,7 +18,8 @@ public class Player {
 		this.numPlayers++;
 	}	
 	
-	public void createNewPlayer(Player user,Scanner in) {
+	public Player createNewPlayer(Player user,Scanner in) {
+		Player temp = new Player();
 		boolean cont = false;
 		int choice = 0;
 		starLine();
@@ -32,7 +33,6 @@ public class Player {
 			user.useNumbers();
 			createNewPlayer(user , in);
 		}
-		Player temp = new Player();
 		if(choice == 1) {
 			gameStart(temp, in);
 			cont = false;
@@ -44,6 +44,7 @@ public class Player {
 			useOneOrTwo();
 			cont = true;
 		}while(cont);
+		return temp;
 	}
 	
 	public void gameStart(Player user , Scanner in) {

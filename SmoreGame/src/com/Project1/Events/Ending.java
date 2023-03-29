@@ -69,7 +69,6 @@ public class Ending extends Senario{
 
 	
 	public void replayGame(Player user, Scanner in) {
-		
 		int choice = 0;
 		boolean cont=false;
 //		System.out.println("\n\n" );
@@ -99,9 +98,8 @@ public class Ending extends Senario{
 				cont = true;
 				break;
 		}
-		}while(cont);
 		endCredits();
-		return;
+		}while(cont);
 	}
 	
 	public void endCredits() {

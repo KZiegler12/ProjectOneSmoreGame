@@ -127,7 +127,7 @@ public class Player {
 	}
 	
 	public void printPlayers() {
-		for(int i = 0 ; i < numPlayers ; i++ ) {
+		for(int i = 0 ; i < numPlayers-1 ; i++ ) {
 				System.out.println(players[i]);	
 		}
 	}

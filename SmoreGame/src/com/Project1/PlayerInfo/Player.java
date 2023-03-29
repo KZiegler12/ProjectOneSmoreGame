@@ -11,20 +11,10 @@ public class Player {
 	private int vision;
 	private Player[] players;
 	private int score;
-	private int numPlayers;
+	private int numPlayers=0;
 	
 	public Player() {
 		players = new Player[5];
-		this.numPlayers++;
-	}
-	
-	public Player(String name ,int strength,int carisma,int vision) {
-		this.name=name;	
-		this.strength=strength;
-		this.carisma=carisma;
-		this.vision=vision;
-		players = new Player[5];
-		this.score=0;
 		this.numPlayers++;
 	}	
 	
@@ -130,8 +120,9 @@ public class Player {
 	
 	public void savePlayer(Player user){
 		for(int i=0 ; i<players.length ; i++) {
-			if(i < numPlayers) 
+			if(i == numPlayers-1) 
 				players[i] = user;
+			
 		}
 	}
 	

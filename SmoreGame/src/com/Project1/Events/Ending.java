@@ -80,6 +80,7 @@ public class Ending extends Senario{
 			user.enterChoice();
 			choice = Integer.parseInt(in.nextLine().trim());
 		}catch(NumberFormatException ex) {
+			user.useNumbers();
 			replayGame(user, in);
 		}
 		switch(choice) {

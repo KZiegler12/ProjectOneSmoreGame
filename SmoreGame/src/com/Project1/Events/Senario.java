@@ -12,13 +12,17 @@ public class Senario  {
 	Random rand = new Random();
 	
 	public void generateSenarios(Player user , Scanner in) {
-		int choice = rand.nextInt(4-1)+1;
+		int choice = rand.nextInt(6-1)+1;
 		if(choice == 1) {
 			senarioOne( user ,  in);
 		}else if(choice == 2) {
 			senarioTwo(user , in);
 		}else if(choice == 3) {	
 			senarioThree(user , in);
+		}else if(choice == 4) {
+			senarioFour(user , in);
+		}else if(choice == 5) {
+			senarioFive(user , in);
 		}
 	}
 	
@@ -56,9 +60,39 @@ public class Senario  {
 		welcomeSenario(user);
 		makeCar().eventCar(user, in);
 		user.starLine();
+		makeShed().eventShed(user, in);
+		user.starLine();
 		makeHouse().eventHouse(user, in); 
 		user.starLine();
+		makeStore().eventStore(user, in);
+		user.starLine();
+		makeYard().eventYard(user, in);
+		user.starLine();
+		makeEnding().endGame(user, in);
+	}
+	
+	public void senarioFour(Player user , Scanner in) {
+		welcomeSenario(user);
+		makeHouse().eventHouse(user, in); 
+		user.starLine();
+		makeStore().eventStore(user, in);
+		user.starLine();
 		makeShed().eventShed(user, in);
+		user.starLine();
+		makeCar().eventCar(user, in);
+		user.starLine();
+		makeYard().eventYard(user, in);
+		user.starLine();
+		makeEnding().endGame(user, in);
+	}
+	
+	public void senarioFive(Player user , Scanner in) {
+		welcomeSenario(user);
+		makeShed().eventShed(user, in);
+		user.starLine();
+		makeCar().eventCar(user, in);
+		user.starLine();
+		makeHouse().eventHouse(user, in); 
 		user.starLine();
 		makeStore().eventStore(user, in);
 		user.starLine();

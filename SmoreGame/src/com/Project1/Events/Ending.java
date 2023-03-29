@@ -89,7 +89,6 @@ public class Ending extends Senario{
 				cont=false;
 				break;
 			case 2:
-				endCredits();
 				cont=false;
 				break;
 			default: 
@@ -99,6 +98,7 @@ public class Ending extends Senario{
 		}
 		}while(cont);
 		endCredits();
+		return;
 	}
 	
 	public void endCredits() {

@@ -30,7 +30,7 @@ public class Ending extends Senario{
 	
 	public void makeSmore(Player user, Scanner in) {
 		System.out.println("\n YAYYY you have success fully won the game!!!"
-				+ "\n you gather all the required material and handled yourself"
+				+ "\n You gathered all the required material, and handled yourself"
 				+ "\n in a way that let your strengths prevail. GO YOU!! I "
 				+ "\n hope you are able to relax and enjoy the nice fire"
 				+ "\n while toasting your S'more thinking of how nice of "
@@ -42,7 +42,7 @@ public class Ending extends Senario{
 		System.out.println("\n AHH you were so close, however you did manage to"
 				+ "\n get enough supplies to be able to make a fire. so you "
 				+ "\n decide to just sit and relax, while the fire warms you "
-				+ "\n and lights up you night. Even with no S'more it still"
+				+ "\n and lights up the night. Even with no S'more it still"
 				+ "\n turned out to be a nice day!");
 		replayGame(user,  in);
 	}
@@ -52,15 +52,15 @@ public class Ending extends Senario{
 				+ "\n needed to make a S'more however you do not have the material"
 				+ "\n to make a fire.... But wait you quickly consult Dr.Google"
 				+ "\n and it turns out you can make S'Mores in the oven so after a"
-				+ "\n a little help from your Mom, you in no time are eating S'mores."
+				+ "\n a little help from your Mom, you are eating S'mores in no time."
 				+ "\n If only you could enjoy it by the fire.");		
 		replayGame(user,  in);
 	}
 	
 	public void noSmore(Player user, Scanner in) {
 		System.out.println("\n Tooo Bad you can't make a S'more or have the warmth of"
-				+ "\n a nice Fire. You lost but with every loss comes another"
-				+ "\n chance to succeed maybe try again. Maybe think differently "
+				+ "\n a nice Fire. You lost, but with every loss comes another"
+				+ "\n chance to succeed. Maybe try again. Maybe think differently "
 				+ "\n regarding your choices. Or try a whole new character. The"
 				+ "\n whole world is yours if you take it one day at a time and "
 				+ "\n FOCUS ON YOUR STRENGTHS ");;
@@ -76,8 +76,8 @@ public class Ending extends Senario{
 		do {
 		System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
 					+ "\n Please enter (1) for YES (2) for NO");
-		user.enterChoice();
 		try {
+			user.enterChoice();
 			choice = Integer.parseInt(in.nextLine().trim());
 		}catch(NumberFormatException ex) {
 			replayGame(user, in);
@@ -94,6 +94,7 @@ public class Ending extends Senario{
 			default: 
 				user.useOneOrTwo();
 				cont = true;
+				break;
 		}
 		}while(cont);
 	}

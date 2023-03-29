@@ -72,8 +72,8 @@ public class Ending extends Senario{
 		
 		int choice = 0;
 		boolean cont=false;
-		System.out.println("\n\n" );
-		user.printPlayers();
+//		System.out.println("\n\n" );
+//		user.printPlayers();
 		inventory.clear();
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
 		do {

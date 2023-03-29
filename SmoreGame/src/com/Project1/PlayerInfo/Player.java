@@ -96,7 +96,7 @@ public class Player {
 		}while(cont);
 		System.out.println();
 		if(choice == 1) {
-			savePlayer(user);
+//			savePlayer(user);
 			runGame(user,in);
 		}else if(choice == 2) {
 			System.out.println("\n*********** Please rechoose your character: *************");
@@ -118,19 +118,18 @@ public class Player {
 		readyToPlay.generateSenarios(user, in);
 	}
 	
-	public void savePlayer(Player user){
-		for(int i=0 ; i<players.length ; i++) {
-			if(i == numPlayers-1) 
-				players[i] = user;
-			
-		}
-	}
-	
-	public void printPlayers() {
-		for(int i = 0 ; i < numPlayers-1 ; i++ ) {
-				System.out.println(players[i]);	
-		}
-	}
+//	public void savePlayer(Player user){
+//		for(int i=0 ; i<players.length ; i++) {
+//			if(i == numPlayers-1) 
+//				players[i] = user;
+//		}
+//	}
+//	
+//	public void printPlayers() {
+//		for(int i = 0 ; i < numPlayers-1 ; i++ ) {
+//				System.out.println(players[i]);	
+//		}
+//	}
 	
 //Common Phrases
 	

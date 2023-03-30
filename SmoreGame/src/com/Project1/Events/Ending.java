@@ -12,8 +12,8 @@ public class Ending extends Senario{
 	public void lifechoice(Player user,Scanner in) {
 		user.setScore(inventory.size());
 		saveScore(user);
-		System.out.println("\n At long you have completed the Game " + user.getName() + "\n Here is your inventory of"
-		+" colected items. \n"+ " " +inventory);
+		System.out.println("\n At long last you have completed the Game " + user.getName() + "\n Here is your inventory of"
+		+" colected items. \n"+ " " + inventory);
 		if(user.getScore()==7) {
 			user.starLine();
 			makeSmore(user,in);
@@ -27,7 +27,6 @@ public class Ending extends Senario{
 			user.starLine();
 			noSmore(user , in);	
 		}
-		endCredits();
 	}
 	
 	public void makeSmore(Player user, Scanner in) {
@@ -76,10 +75,11 @@ public class Ending extends Senario{
 		System.out.println("\n\n The current players are: \n " + players);
 		highScore(user);
 		inventory.clear();
-		System.out.println("\n\n" + user + " Try again to beat your score!!");
-		do {
+		System.out.println("\n\n" + user.getName() + " Try again to beat or match the High Score!!");
+		
 		System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
 					+ "\n Please enter (1) for YES (2) for NO");
+		do {
 		try {
 			user.enterChoice();
 			choice = Integer.parseInt(in.nextLine().trim());
@@ -90,17 +90,17 @@ public class Ending extends Senario{
 		switch(choice) {
 			case 1:
 				user.createNewPlayer(user, in);
-				cont=false;
 				break;
 			case 2:
 				cont=false;
-				return;
+				break;
 			default: 
 				user.useOneOrTwo();
 				cont = true;
 				break;
 		}
 		}while(cont);
+		endCredits();
 	}
 	
 	public void endCredits() {

@@ -41,7 +41,7 @@ public class Car extends Senario{
 			System.out.println("\n You heave against the metal door, of course your family vehicle is "
 					+ "\n an oldie. The metal doesn't budge and now here you are feet against the car "
 					+ "\n pulling with all your might and still nothing, but you might go"
-					+ "\n viral as you let go you see the neighbors were filming your whole struggle");
+					+ "\n viral. As you let go, you see the neighbors were filming your whole struggle");
 		}else {
 			System.out.println("\n You go over to the vehicle and there the keys are just on the inside "
 					+ "\n you give the door a firm tug and think there is no way im getting this open"

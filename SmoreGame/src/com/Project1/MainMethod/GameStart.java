@@ -8,6 +8,7 @@ public class GameStart {
 	public static void main(String[] Args) {
 		Scanner in = new Scanner(System.in);
 		playGame(in);
+		in.close();
 	}
 	
 	public static void playGame(Scanner in) {

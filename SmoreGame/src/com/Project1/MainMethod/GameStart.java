@@ -1,6 +1,6 @@
 package com.Project1.MainMethod;
 
-import java.util.Scanner;
+import java.util.Scanner;	
 import com.Project1.PlayerInfo.Player;
 
 public class GameStart {
@@ -8,7 +8,7 @@ public class GameStart {
 	public static void main(String[] Args) {
 		Scanner in = new Scanner(System.in);
 		playGame(in);
-		in.close();
+		in.close();                                                       
 	}
 	
 	public static void playGame(Scanner in) {

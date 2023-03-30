@@ -91,16 +91,16 @@ public class Player {
 			useNumbers();
 		}
 		}while(cont);
-		System.out.println();
 		if(choice == 1) {
 			runGame(user,in);
+			cont=false;
 		}else if(choice == 2) {
 			System.out.println("\n*********** Please rechoose your character: *************");
 			chooseCharacter(user, in);
 		}else {
 			useOneOrTwo();
 			chooseCharacter(user, in);
-		}	
+		}
 	}
 	
 	public void setStats(int strength, int carisma , int vision) {

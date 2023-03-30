@@ -12,11 +12,11 @@ public class Store extends Senario{
 				+"\n Some of which will help you in your quest to find the ingredients "
 				+"\n necessary to find make a S'more.");
 		System.out.println("\n What would you like to do? "
-				+ "\n\n 1) Convince a cashier to walk you all over the store to make sure you are able to find "
+				+ "\n\n 1)Convince a cashier to walk you all over the store to make sure you are able to find "
 				+ "\n what you are looking for!"
-				+ "\n\n 2) Look around to see if you can the items that you need all by yourself"
+				+ "\n\n 2)Look around to see if you can the items that you need all by yourself"
 				+ "\n you don't need no help!"
-				+ "\n\n 3) They have got to have what you need somewhere, just tear through every aisle"
+				+ "\n\n 3)They have got to have what you need somewhere, just tear through every aisle"
 				+ "\n making a mess as you go!");
 		choice = decisionTime(user , in);
 		if (choice == 1) 

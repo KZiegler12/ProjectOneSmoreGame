@@ -6,12 +6,16 @@ import java.util.Scanner;
 import com.Project1.PlayerInfo.Player;
 
 public class Senario  {
-
+	
+	static int maxScore = 0;
+	static ArrayList<String> players = new ArrayList<>();
+	static ArrayList<Integer> playerScores = new ArrayList<>();
 	static ArrayList<String> inventory = new ArrayList<String>();
 	
 	Random rand = new Random();
 	
 	public void generateSenarios(Player user , Scanner in) {
+		savePlayer(user);
 		int choice = rand.nextInt(6-1)+1;
 		if(choice == 1) {
 			senarioOne( user ,  in);
@@ -128,6 +132,23 @@ public class Senario  {
 	
 	public void welcomeSenario(Player user) {
 		System.out.println("\n WELCOME TO THE GAME " + user.getName() + " HAVE FUN!");
+	}
+	
+	public void savePlayer(Player user) {
+		players.add(user.getName());
+	}
+	
+	public void saveScore(Player user) {
+		playerScores.add(user.getScore());
+	}
+	
+	public void highScore(Player user) {
+		for(int i=0;i<players.size();i++) {
+			if(user.getScore()>maxScore) {
+				maxScore = user.getScore();
+			}
+		}
+	System.out.println(" The highscore for today is: " + maxScore);
 	}
 	
 	public Store makeStore() {

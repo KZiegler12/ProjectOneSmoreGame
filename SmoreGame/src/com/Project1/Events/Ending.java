@@ -1,6 +1,6 @@
 package com.Project1.Events;
 
-import java.util.Scanner;
+import java.util.Scanner;	
 import com.Project1.PlayerInfo.Player;
 
 public class Ending extends Senario{
@@ -11,8 +11,9 @@ public class Ending extends Senario{
 	
 	public void lifechoice(Player user,Scanner in) {
 		user.setScore(inventory.size());
+		saveScore(user);
 		System.out.println("\n At long you have completed the Game " + user.getName() + "\n Here is your inventory of"
-		+" colected items. \n"+ inventory);
+		+" colected items. \n"+ " " +inventory);
 		if(user.getScore()==7) {
 			user.starLine();
 			makeSmore(user,in);
@@ -71,8 +72,8 @@ public class Ending extends Senario{
 	public void replayGame(Player user, Scanner in) {
 		int choice = 0;
 		boolean cont=false;
-//		System.out.println("\n\n" );
-//		user.printPlayers();
+		System.out.println("\n\n The current players are: \n" + players);
+		highScore(user);
 		inventory.clear();
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
 		do {

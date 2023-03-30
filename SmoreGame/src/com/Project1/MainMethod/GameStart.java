@@ -7,11 +7,10 @@ public class GameStart {
 	
 	public static void main(String[] Args) {
 		Scanner in = new Scanner(System.in);
-		GameStart start = new GameStart();
-		start.playGame(in);
+		playGame(in);
 	}
 	
-	public void playGame(Scanner in) {
+	public static void playGame(Scanner in) {
 		Player user = new Player();
 		int choice=0;
 		boolean cont=false;

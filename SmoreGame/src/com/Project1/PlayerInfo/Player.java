@@ -9,13 +9,9 @@ public class Player {
 	private int strength;
 	private int carisma;
 	private int vision;
-	private Player[] players;
 	private int score;
-	private int numPlayers=0;
 	
 	public Player() {
-		players = new Player[5];
-		this.numPlayers++;
 	}	
 	
 	public Player createNewPlayer(Player user,Scanner in) {
@@ -97,7 +93,6 @@ public class Player {
 		}while(cont);
 		System.out.println();
 		if(choice == 1) {
-//			savePlayer(user);
 			runGame(user,in);
 		}else if(choice == 2) {
 			System.out.println("\n*********** Please rechoose your character: *************");
@@ -119,19 +114,7 @@ public class Player {
 		readyToPlay.generateSenarios(user, in);
 	}
 	
-//	public void savePlayer(Player user){
-//		for(int i=0 ; i<players.length ; i++) {
-//			if(i == numPlayers-1) 
-//				players[i] = user;
-//		}
-//	}
-//	
-//	public void printPlayers() {
-//		for(int i = 0 ; i < numPlayers-1 ; i++ ) {
-//				System.out.println(players[i]);	
-//		}
-//	}
-	
+
 //Common Phrases
 	
 	public void starLine() {
@@ -189,6 +172,8 @@ public class Player {
 		this.score=score;
 	}
 	
+
+
 	@Override
 	public String toString() {
 		return String.format(" [Player: name = %s , strength = %d , carisma = %d , vision = %d , Score = %d] \n",

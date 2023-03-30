@@ -27,6 +27,7 @@ public class Ending extends Senario{
 			user.starLine();
 			noSmore(user , in);	
 		}
+		endCredits();
 	}
 	
 	public void makeSmore(Player user, Scanner in) {
@@ -72,7 +73,7 @@ public class Ending extends Senario{
 	public void replayGame(Player user, Scanner in) {
 		int choice = 0;
 		boolean cont=false;
-		System.out.println("\n\n The current players are: \n" + players);
+		System.out.println("\n\n The current players are: \n " + players);
 		highScore(user);
 		inventory.clear();
 		System.out.println("\n\n" + user + " Try again to beat your score!!");
@@ -93,13 +94,12 @@ public class Ending extends Senario{
 				break;
 			case 2:
 				cont=false;
-				break;
+				return;
 			default: 
 				user.useOneOrTwo();
 				cont = true;
 				break;
 		}
-		endCredits();
 		}while(cont);
 	}
 	

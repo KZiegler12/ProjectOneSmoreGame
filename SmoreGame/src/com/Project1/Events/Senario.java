@@ -143,14 +143,12 @@ public class Senario  {
 	}
 	
 	public void highScore(Player user) {
-		int nameIndex = 0;
 		for(int i=0;i<players.size();i++){
 			if(user.getScore()>maxScore){
-				nameIndex=i;
 				maxScore = user.getScore();
 			}
 		}
-	System.out.println(" The highscore for today is: " + maxScore + "\n Held by: " + players.get(nameIndex));
+	System.out.println(" The highscore for today is: " + maxScore );
 	}
 	
 	public Store makeStore() {

@@ -42,7 +42,7 @@ public class Senario  {
 		user.starLine();
 		makeYard().eventYard(user, in);
 		user.starLine();
-		makeEnding().endGame(user, in);
+		makeEnding().lifechoice(user, in);
 	}
 	
 	public void senarioTwo(Player user , Scanner in) {
@@ -57,7 +57,7 @@ public class Senario  {
 		user.starLine();
 		makeYard().eventYard(user, in);
 		user.starLine();
-		makeEnding().endGame(user, in);
+		makeEnding().lifechoice(user, in);
 	}
 	
 	public void senarioThree(Player user , Scanner in) {
@@ -72,7 +72,7 @@ public class Senario  {
 		user.starLine();
 		makeYard().eventYard(user, in);
 		user.starLine();
-		makeEnding().endGame(user, in);
+		makeEnding().lifechoice(user, in);
 	}
 	
 	public void senarioFour(Player user , Scanner in) {
@@ -87,7 +87,7 @@ public class Senario  {
 		user.starLine();
 		makeYard().eventYard(user, in);
 		user.starLine();
-		makeEnding().endGame(user, in);
+		makeEnding().lifechoice(user, in);
 	}
 	
 	public void senarioFive(Player user , Scanner in) {
@@ -102,7 +102,7 @@ public class Senario  {
 		user.starLine();
 		makeYard().eventYard(user, in);
 		user.starLine();
-		makeEnding().endGame(user, in);
+		makeEnding().lifechoice(user, in);
 	}
 	
 	public int decisionTime(Player user , Scanner in) {
@@ -128,6 +128,7 @@ public class Senario  {
 			}
 		}while(cont);
 		return choice;
+		
 	}
 	
 	public void welcomeSenario(Player user) {

@@ -30,7 +30,7 @@ public class GameStart {
 			}
 			if(choice == 1) {
 				user.gameStart(user , in);
-				cont = false;
+				return;
 			}else if (choice == 2){
 				System.out.println("\n Sorry to see you go");
 				cont = false;
@@ -38,6 +38,6 @@ public class GameStart {
 				user.useOneOrTwo();
 				cont = true;
 			}
-		}while(cont);	
+		}while(cont);
 	}
 }

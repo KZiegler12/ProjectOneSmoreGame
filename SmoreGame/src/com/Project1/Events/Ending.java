@@ -5,10 +5,6 @@ import com.Project1.PlayerInfo.Player;
 
 public class Ending extends Senario{
 	
-	public void endGame(Player user, Scanner in) {
-		lifechoice(user,in);
-	}
-	
 	public void lifechoice(Player user,Scanner in) {
 		user.setScore(inventory.size());
 		saveScore(user);
@@ -75,7 +71,7 @@ public class Ending extends Senario{
 		System.out.println("\n\n The current players are: \n " + players);
 		highScore(user);
 		inventory.clear();
-		System.out.println("\n\n" + user.getName() + " Try again to beat or match the High Score!!");
+		System.out.println("\n\n " + user.getName() + " Try again to beat or match the High Score!!");
 		
 		System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
 					+ "\n Please enter (1) for YES (2) for NO");
@@ -87,20 +83,20 @@ public class Ending extends Senario{
 			user.useNumbers();
 			replayGame(user, in);
 		}
-		switch(choice) {
-			case 1:
-				user.createNewPlayer(user, in);
-				break;
-			case 2:
-				cont=false;
-				break;
-			default: 
-				user.useOneOrTwo();
-				cont = true;
-				break;
+			switch(choice) {
+				case 1:
+					user.createNewPlayer(user, in);
+					break;
+				case 2:
+					endCredits();
+					cont=false;
+					break;
+				default: 
+					user.useOneOrTwo();
+					cont = true;
+					break;
 		}
 		}while(cont);
-		endCredits();
 	}
 	
 	public void endCredits() {

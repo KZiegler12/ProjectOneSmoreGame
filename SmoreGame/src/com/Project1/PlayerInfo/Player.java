@@ -14,14 +14,14 @@ public class Player {
 	public Player() {
 	}	
 	
-	public Player createNewPlayer(Player user,Scanner in) {
+	public void createNewPlayer(Player user,Scanner in) {
 		Player temp = new Player();
 		boolean cont = false;
 		int choice = 0;
 		starLine();
+		do {
 		System.out.println("\n Would you like to change your name?");
 		System.out.println(" Please enter (1) for YES (2) for NO");
-		do {
 		user.enterChoice();
 		try {
 			choice = Integer.parseInt(in.nextLine().trim());
@@ -31,25 +31,24 @@ public class Player {
 		}
 		if(choice == 1) {
 			gameStart(temp, in);
-			cont = false;
+			return;
 		}else if(choice == 2) {
 			temp.setName(user.getName());
 			chooseCharacter(temp, in);
-			cont = false;
+			return;
 		}else 
 			useOneOrTwo();
-			cont = true;
 		}while(cont);
-		return temp;
 	}
 	
 	public void gameStart(Player user , Scanner in) {
 		String name = " ";
-		do{
-			System.out.print("\n Lets get started! \n Please input your username:");
-			name = in.nextLine();
-		}while(name.isEmpty());
-		user.setName(name.trim());
+		System.out.print("\n Lets get started! \n Please input your username:");
+		name = in.nextLine();
+		if(name.trim().length()==0) {
+			gameStart(user , in);
+		}
+		user.setName(name);
 		starLine();
 		chooseCharacter(user , in);
 	}
@@ -93,7 +92,6 @@ public class Player {
 		}while(cont);
 		if(choice == 1) {
 			runGame(user,in);
-			cont=false;
 		}else if(choice == 2) {
 			System.out.println("\n*********** Please rechoose your character: *************");
 			chooseCharacter(user, in);
@@ -118,9 +116,9 @@ public class Player {
 //Common Phrases
 	
 	public void starLine() {
-		System.out.print("\n******************************************************************************************************\n");
-		System.out.print("***********************************************LOADING************************************************\n");
-		System.out.print("******************************************************************************************************\n");
+		System.out.print("\n ******************************************************************************************************\n");
+		System.out.print(" ***********************************************LOADING************************************************\n");
+		System.out.print(" ******************************************************************************************************\n");
 	}
 	
 	public void useNumbers() {

@@ -64,7 +64,7 @@ public class Store extends Senario{
 		if(user.getStrength() == 10) {
 			System.out.println("\n You feel your Muscles buldge as you think where could this delectible"
 					+ "\n food be. Fustrated you Charge the nearest aisle food flying around you as "
-					+ "\n you hit aisle 7 you STOP and see the there next to the Twinkies"	
+					+ "\n you hit aisle 7 you STOP and see theM there next to the Twinkies"	
 					+ "\n\n You have successfully added MARSHMELLOWS to your inventory.");
 			inventory.add("Marshmellow");
 		}else {

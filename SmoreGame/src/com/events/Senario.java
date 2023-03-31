@@ -1,9 +1,9 @@
-package com.Project1.Events;
+package com.events;
 
-import java.util.ArrayList;
+import java.util.ArrayList;	
 import java.util.Random;
 import java.util.Scanner;
-import com.Project1.PlayerInfo.Player;
+import com.playerservice.Player;
 
 public class Senario  {
 	

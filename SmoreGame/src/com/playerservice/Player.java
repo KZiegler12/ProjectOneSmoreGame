@@ -1,7 +1,8 @@
-package com.Project1.PlayerInfo;
+package com.playerservice;
 
 import java.util.Scanner;
-import com.Project1.Events.Senario;
+
+import com.events.Senario;
 
 public class Player {
 	

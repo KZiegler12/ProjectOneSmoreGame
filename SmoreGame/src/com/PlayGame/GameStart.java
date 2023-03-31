@@ -1,7 +1,7 @@
-package com.Project1.MainMethod;
+package com.PlayGame;
 
-import java.util.Scanner;	
-import com.Project1.PlayerInfo.Player;
+import java.util.Scanner;
+import com.playerservice.Player;
 
 public class GameStart {
 	

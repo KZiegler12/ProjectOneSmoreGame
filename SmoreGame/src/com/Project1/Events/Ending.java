@@ -72,7 +72,6 @@ public class Ending extends Senario{
 		highScore(user);
 		inventory.clear();
 		System.out.println("\n\n " + user.getName() + " Try again to beat or match the High Score!!");
-		
 		System.out.print("\n You Have completed the Game!!! \n Would you like to play again?"
 					+ "\n Please enter (1) for YES (2) for NO");
 		do {

@@ -55,50 +55,62 @@ public class Player {
 
 	public void chooseCharacter(Player user, Scanner in) {
 		int choice=0;
-		boolean cont = false;
+		boolean cont=false;
 		System.out.print("\n Please choose you character: "
 				+ "\n 1)Mr.Carismatic able to convince anyone \n to do anything"
 				+ "\n 2)Eagle Eyes not Strong but who needs \n strength when you can see Everything"
 				+ "\n 3)Buff BOI not the smartest and can't \n see to well but can walk through anything");
 		do {
-			System.out.print("\n Please choose using NUMBERS only: ");
-			try {
-			choice = Integer.parseInt(in.nextLine());
-			}catch(NumberFormatException ex) {
-				useNumbers();
-				chooseCharacter(user,in);
-			}
-		}while(choice < 1 && choice > 3 );
+		System.out.print("\n Please choose using NUMBERS only: ");
+		try {
+		choice = Integer.parseInt(in.nextLine());
+		}catch(NumberFormatException ex) {
+			useNumbers();
+			choice=7;
+			cont=false;
+		}
 		if(choice == 1) {
 			user.setStats(5, 10, 3);
+			cont=false;
 		}else if (choice == 2) {
 			user.setStats(3, 5, 10);
+			cont=false;
 		}else if (choice == 3){
 			user.setStats(10, 3, 5);
-		}else{
+			cont=false;
+		}else {
 			useOneToThree();
-			chooseCharacter(user, in);
+			cont=true;
 		}
+		}while(cont);	
 		starLine();
+		changeCharacter(user,in);
+	}
+	
+	public void changeCharacter(Player user, Scanner in) {
+		int choice = 0;
+		boolean cont=false;
 		System.out.println("\n Your current Stats are: \n" + user);
-		do {
-		System.out.print(" Please enter (1) to Start OR (2) to Change Characters:");
+		do{
+			System.out.print(" Please enter (1) to Start OR (2) to Change Characters:");
 		try {
 		choice = Integer.parseInt(in.nextLine().trim());
 		}catch(NumberFormatException ex) {
-			cont = true;
 			useNumbers();
+			choice=5;
 		}
-		}while(cont);
 		if(choice == 1) {
 			runGame(user,in);
+			cont=false;
 		}else if(choice == 2) {
 			System.out.println("\n*********** Please rechoose your character: *************");
 			chooseCharacter(user, in);
+			cont=false;
 		}else {
 			useOneOrTwo();
-			chooseCharacter(user, in);
-		}
+			cont=true;
+		}	
+		}while(cont);
 	}
 	
 	public void setStats(int strength, int carisma , int vision) {

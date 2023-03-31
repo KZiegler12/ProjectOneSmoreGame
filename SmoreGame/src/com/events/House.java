@@ -9,7 +9,7 @@ public class House extends Senario{
 	public void eventHouse(Player user , Scanner in) {
 		int choice = 0 ;
 		System.out.println("\n Welcome to your Home " + user.getName() + ". "
-				+ "\n You live here with your family so things get disorganised and can"
+				+ "\n You live here with your family so things get disorganized and can"
 				+ "\n get mis-placed all the time here you need to find a couple more ingredients you need Graham"
 				+ "\n Crackers and Chocolate you know you had both a couple days ago now you just need to find them");
 		System.out.println("\n What would you like to do? "
